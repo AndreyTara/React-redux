@@ -5,20 +5,20 @@ import { selectCount } from "../redux/start/selectors";
 import { increment } from "../redux/start/slice";
 
 function App() {
-  const [countRea, setCountRea] = useState(0);
+  const [countReact, setCountReact] = useState(0);
 
-  const countRed = useSelector(selectCount);
+  const countRedux = useSelector(selectCount);
   const dispatch = useDispatch();
   return (
     <>
       <h1>Vite + React + Redux </h1>
       <div>
-        <button onClick={() => setCountRea((countRea) => countRea + 1)}>
-          React count is {countRea}
+        <button onClick={() => setCountReact((countReact) => countReact + 1)}>
+          React count is {countReact}
         </button>
 
         <button onClick={() => dispatch(increment())}>
-          Redux count is {countRed}
+          Redux count is {countRedux}
         </button>
       </div>
       <p className="read-the-docs">
